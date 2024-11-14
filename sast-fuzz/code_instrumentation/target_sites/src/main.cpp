@@ -523,7 +523,14 @@ void instrument(const TargetInfos &targetInfos) {
             if (dTb.count(bb)) {
                 uint32_t bbId = allBBIndices.at(bb);
 
-                auto distance = (uint32_t)(100 * dTb[bb]);
+                /* Ensure distance is not zero for non-target basic blocks */
+                double rawDistance = 100.0 * dTb[bb];
+                uint32_t distance;
+                if (rawDistance < 1.0 && rawDistance > 0.0) {
+                    distance = 1;
+                } else {
+                    distance = (uint32_t)(rawDistance);
+                }
 
                 ConstantInt *Distance = ConstantInt::get(LargestType, (unsigned)distance);
 
