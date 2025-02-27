@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Chair for Software & Systems Engineering, TUM
+# Copyright 2023-2024 XXX
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

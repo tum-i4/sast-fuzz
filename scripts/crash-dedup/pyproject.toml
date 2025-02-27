@@ -2,7 +2,7 @@
 name = "crash-dedup"
 version = "0.1.0"
 description = "Deduplication of program crashes enforced by sanitizes"
-authors = ["Stephan Lipp <stephan.lipp@tum.de>"]
+authors = ["XXX <XXX>"]
 # readme = "README.md"
 packages = [{include = "cdd", from = "src"}]
 
